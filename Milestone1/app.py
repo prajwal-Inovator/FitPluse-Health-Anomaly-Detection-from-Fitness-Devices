@@ -11,9 +11,7 @@ st.set_page_config(
 st.title("🏃‍♂️ FitPulse Anomaly Detection")
 st.caption("Health Data Collection & Preprocessing")
 
-# ---------------------------
-# Sidebar (RESTORED)
-# ---------------------------
+
 st.sidebar.header("⚙️ Preprocessing Options")
 
 timestamp_col = st.sidebar.text_input(
@@ -31,9 +29,7 @@ to_utc = st.sidebar.checkbox(
     value=True
 )
 
-# ---------------------------
-# File Upload
-# ---------------------------
+
 uploaded = st.file_uploader(
     "Upload Fitness CSV or JSON file",
     type=["csv", "json"]
@@ -61,9 +57,7 @@ if uploaded:
         st.warning(str(e))
         st.stop()
 
-    # ---------------------------
-    # Run pipeline
-    # ---------------------------
+   
     if st.button("🚀 Run FitPulse Preprocessing"):
         try:
             df_processed, out_csv = preprocess_fitpulse_pipeline(
