@@ -2,9 +2,7 @@ import pandas as pd
 import io
 from typing import Optional
 
-# ---------------------------
-# Load file (CSV / JSON)
-# ---------------------------
+
 def load_file(contents: bytes, filename: str) -> pd.DataFrame:
     name = filename.lower()
 
@@ -22,9 +20,7 @@ def load_file(contents: bytes, filename: str) -> pd.DataFrame:
     raise ValueError("Unsupported file format (only CSV or JSON allowed)")
 
 
-# ---------------------------
-# Normalize timestamps
-# ---------------------------
+
 def normalize_timestamps(
     df: pd.DataFrame,
     timestamp_col: Optional[str] = "timestamp",
@@ -56,9 +52,7 @@ def normalize_timestamps(
     return df.set_index(timestamp_col).sort_index()
 
 
-# ---------------------------
-# Extract metrics (DATASET-SPECIFIC)
-# ---------------------------
+
 def extract_health_metrics(df: pd.DataFrame) -> pd.DataFrame:
 
     data = {}
@@ -84,9 +78,6 @@ def extract_health_metrics(df: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(data, index=df.index)
 
 
-# ---------------------------
-# Handle missing values
-# ---------------------------
 def handle_missing(df: pd.DataFrame) -> pd.DataFrame:
 
     if "heart_rate" in df.columns:
@@ -101,9 +92,7 @@ def handle_missing(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-# ---------------------------
-# Full Pipeline
-# ---------------------------
+
 def preprocess_fitpulse_pipeline(
     contents: bytes,
     filename: str,
