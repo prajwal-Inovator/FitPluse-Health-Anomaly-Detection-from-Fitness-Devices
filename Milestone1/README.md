@@ -31,7 +31,7 @@ A Streamlit application was created to visualize the cleaned dataset.
 Live Demo
 https://huggingface.co/spaces/Prajwalvs/FitPulse
 
-Tools Used
+Tools Used :
 Python
 Pandas
 NumPy
