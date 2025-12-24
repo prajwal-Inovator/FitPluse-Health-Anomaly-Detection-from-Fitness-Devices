@@ -5,6 +5,3 @@ seaborn
 scikit-learn
 tsfresh
 prophet
-statsmodels
-scipy
-jupyter
