@@ -80,16 +80,3 @@ All visualizations are interactive and update dynamically based on selected filt
 The Streamlit dashboard effectively fulfills all Milestone-4 requirements by providing an end-to-end interactive system for health anomaly detection and visualization. The solution supports proactive health monitoring, is easy to use, and enables exportable insights for further analysis or reporting.
 
 ---
-
-## Milestone 4 Compliance Summary
-
-- Streamlit dashboard implemented ✔
-- Runs in Google Colaboratory ✔
-- File upload (CSV/JSON) supported ✔
-- Dynamic anomaly detection ✔
-- Metric-wise and date-wise filtering ✔
-- Interactive visualizations ✔
-- Downloadable anomaly report (CSV) ✔
-- Executes without runtime errors ✔
-
----
